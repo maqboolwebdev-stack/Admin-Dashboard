@@ -1,0 +1,22 @@
+:root {
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Barlow", sans-serif;
+  --normal-weight: 400;
+  --bold-weight: 700;
+}
+
+h1 {
+  font-family: var(--secondary-font-family);
+  font-weight: var(--bold-weight);
+}
+
+h2 {
+  font-family: var(--primary-font-family);
+  font-weight: var(--bold-weight);
+}
+p {
+  font-family: var(--primary-font-family);
+  font-weight: var(--normal-weight);
+  letter-spacing: 1px;
+  color: rgb(56, 55, 55);
+}

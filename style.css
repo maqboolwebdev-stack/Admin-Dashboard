@@ -158,9 +158,9 @@ body {
     background-color: var(--primary-color);
     color: var(--white-color);
     font-family: var(--primary-font-family);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
 }
 
 .sidebar img {

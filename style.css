@@ -9,6 +9,9 @@
     --white-color: hsl(0, 0%, 100%);
     --searchbar-bg: hsl(214.29deg 31.82% 91.37%);
     --invert-img-color-filter: invert(1);
+    --standard-transition: all 0.15s ease;
+    --standard-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* --header-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
 }
 
  /*  CSS RESET */
@@ -87,7 +90,7 @@ body {
     opacity: .6;
 }
 
-.search-container input {
+input[type='search'] {
     width: 80%;
     height: 1em;
     border-radius: 20px;
@@ -98,7 +101,15 @@ body {
     font-size: 1.2rem;
     color: var(--light-black-color);
     letter-spacing: 1.5px;
-    caret-color: var(--light-black-color);
+    caret-color: var(--primary-color);
+    outline: 1px solid transparent;
+    transition: var(--standard-transition);
+}
+
+input[type='search']:focus {
+    background-color: var(--white-color);
+    outline: 1px solid var(--primary-color);
+    box-shadow: var(--standard-box-shadow);
 }
 
 .notification-container {
@@ -107,6 +118,16 @@ body {
     align-items: center;
     gap: 2em;
     font-family: var(--primary-font-family);
+    transition: var(--standard-transition);
+}
+
+.notification-container img:hover {
+    cursor: pointer;
+    opacity: .75;
+}
+
+.notification-container img:active {
+    opacity: 1;
 }
 
 .header-top-pic,
@@ -132,6 +153,16 @@ body {
 
 .profile-container img {
     height: 5em;
+    cursor: pointer;
+    transition: var(--standard-transition);
+}
+
+.profile-container img:hover {
+    opacity: .75;
+}
+
+.profile-container img:active {
+    opacity: 1;
 }
 
 .buttons-container {
@@ -148,6 +179,16 @@ body {
     border: none;
     padding: .5em 1.5em;
     border-radius: 2em;
+    cursor: pointer;
+    transition: var(--standard-transition);
+}
+
+.buttons-container button:hover {
+    opacity: .75;
+}
+
+.buttons-container button:active {
+    opacity: 1;
 }
 
 
@@ -172,7 +213,26 @@ body {
     display: flex;
     gap: 1em;
     padding-left: 2em;
+    cursor: pointer;
+    transition: var(--standard-transition);
 }
+
+.alinement:hover {
+    background-color: hsl(201, 100%, 50%);
+    transform: scale(1.01);
+}
+
+.alinement:active {
+    background-color: hsla(201, 100%, 50%, 0.5);
+    transform: scale(1);
+}
+
+.dashboard:hover {
+    background-color: inherit;
+    transform: none;
+}
+
+
 .dashboard img {
     height: 3em;
 }
@@ -215,6 +275,13 @@ body {
     border-left: 8px solid var(--primary-color);
 }
 
+.announcements-container:hover,
+.profile-card:hover,
+.card:hover {
+    box-shadow: var(--standard-box-shadow);
+    transition: var(--standard-transition);
+}
+
 .card h4 {
     font-family: var(--primary-font-family);
 }
@@ -232,6 +299,16 @@ body {
 
 .icons-container img {
     height: 1em;
+}
+
+.icons-container img:hover {
+    transform: scale(1.1);
+    opacity: .6;
+    cursor: pointer;
+}
+
+.icons-container img:active {
+    opacity: 1;
 }
 
 .right-side-container h3{
@@ -293,4 +370,13 @@ body {
     align-items: center;
     gap: 1em;
     padding: 1em;
+    transition: var(--standard-transition);
+}
+
+.profile-card img:hover {
+    opacity: .75;
+    cursor: pointer;
+}
+.profile-card img:active {
+    opacity: 1;
 }
